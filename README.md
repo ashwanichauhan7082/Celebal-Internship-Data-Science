@@ -1,9 +1,13 @@
 # 🎓 Celebal Technology — Data Science Internship
 
 **Intern:** Ashwani Kumar
-**College:** MMDU (Maharishi Markandeshwar Deemed University)
+
+**College:** MMDU (Maharishi Markandeshwar Deemed to be University)
+
 **Role:** Data Scientist Intern
+
 **Program:** Data Science
+
 **Duration:** May 2026 – Present
 
 ---
