@@ -1,13 +1,9 @@
 # 🎓 Celebal Technology — Data Science Internship
 
 **Intern:** Ashwani Kumar
-
 **College:** MMDU (Maharishi Markandeshwar Deemed University)
-
 **Role:** Data Scientist Intern
-
 **Program:** Data Science
-
 **Duration:** May 2026 – Present
 
 ---
@@ -20,6 +16,7 @@
 | `week2_Ashwani_kumar_MMDU.ipynb` | Week 2 | Classical ML Pipeline |
 | `week3_Ashwani_kumar_MMDU.ipynb` | Week 3 | Customer Intelligence System |
 | `week4_Ashwani_kumar_MMDU.ipynb` | Week 4 | Deep Learning — CIFAR-10 |
+| `week5_Ashwani_kumar_MMDU.ipynb` | Week 5 | RNN, LSTM, GRU — Text Generation |
 
 ---
 
@@ -80,42 +77,61 @@
 - Logistic Regression: Accuracy 0.9706, F1 0.9655
 - K-Means K=3 Silhouette Score: 0.2833
 - Countries segmented into Developed, Developing and Underdeveloped clusters
-- DBSCAN detected outlier countries not fitting standard patterns
 
 ---
 
 ## 📙 Week 4 — Intro to Deep Learning (CIFAR-10)
 
 **Dataset:** CIFAR-10 — 60,000 color images, 10 classes
-**Classes:** Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck
 
 **Topics Covered:**
-- 🧠 Perceptron and MLP (Multi Layer Perceptron)
-- ➡️ Forward Pass and Backpropagation
+- 🧠 Perceptron, MLP, Forward Pass and Backpropagation
 - ⚡ Activation Functions — Sigmoid, Tanh, ReLU Family
-- 📉 Loss Functions — Sparse Categorical Cross Entropy
 - 🔍 Convolution Layer, Pooling, Stride and Padding
-- 🏗️ CNN Architectures — LeNet, VGG, ResNet concepts
-- 🔄 Transfer Learning — pretrained model concepts
+- 🏗️ CNN Architectures and Transfer Learning concepts
 - 📈 Data Augmentation — RandomFlip, RandomRotation, RandomZoom
 - 🛑 EarlyStopping — prevent overfitting
 
 **Models Built:**
-| Model | Test Accuracy |
-|-------|--------------|
-| ANN Baseline | ~50% |
-| ANN Deeper (4 layers) | ~52% |
-| CNN Baseline | ~72% |
-| CNN Larger Filters | ~74% |
-| CNN 20 Epochs | ~75% |
-| CNN + EarlyStopping | ~73% |
-| CNN + Augmentation | ~71% |
+| Model | Highlights |
+|-------|-----------|
+| ANN Baseline | Flattens image, ignores spatial structure |
+| CNN Baseline | Uses convolution — significantly outperforms ANN |
+| CNN + Larger Filters | Captures more complex features |
+| CNN + 20 Epochs | Longer training, improved accuracy |
+| CNN + EarlyStopping | Automatically finds optimal stopping point |
+| CNN + Augmentation | Better generalization on unseen images |
 
 **Key Results:**
-- CNN outperformed ANN by ~22% on CIFAR-10
+- CNN significantly outperformed ANN on CIFAR-10 image classification
 - Data augmentation improved model generalization
-- EarlyStopping found optimal epoch automatically
 - BatchNormalization stabilized CNN training
+
+---
+
+## 📒 Week 5 — RNN, LSTM and GRU (Text Generation)
+
+**Task:** Build and compare sequence models for next-word prediction and text generation
+
+**Topics Covered:**
+- 🔁 Vanilla RNN — baseline sequential model
+- 🔒 LSTM — input, forget and output gates for long-term memory
+- ⚡ GRU — reset and update gates, faster than LSTM
+- 🔤 Tokenization and n-gram sequence creation
+- ✍️ Custom text generation function
+- 📉 Training loss comparison across all 3 models
+
+**Tasks Completed:**
+- Replaced corpus with custom paragraph
+- Increased embedding dimension (32 → 100)
+- Increased training epochs (100 → 200)
+- Changed hidden units (64 → 128)
+- Generated extended text sequences (10 words)
+
+**Key Results:**
+- LSTM and GRU achieved lower training loss than vanilla RNN
+- GRU trained faster than LSTM with comparable performance
+- Demonstrated why gated architectures handle long-term dependencies better
 
 ---
 
@@ -150,7 +166,7 @@
 | Week 2 | Classical ML Pipeline | ✅ Completed |
 | Week 3 | Customer Intelligence System | ✅ Completed |
 | Week 4 | Deep Learning — CIFAR-10 | ✅ Completed |
-| Week 5 | RNN | 🔄 In Progress |
-| Week 6 | Autoencoders and GAN | ⏳ Upcoming |
+| Week 5 | RNN, LSTM, GRU | ✅ Completed |
+| Week 6 | Autoencoders and GAN | 🔄 In Progress |
 | Week 7 | RAG and LLMs | ⏳ Upcoming |
 | Week 8 | AI Agents | ⏳ Upcoming |
