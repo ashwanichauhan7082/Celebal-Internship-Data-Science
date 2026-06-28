@@ -1,13 +1,9 @@
 # 🎓 Celebal Technology — Data Science Internship
 
 **Intern:** Ashwani Kumar
-
-**College:** MMDU (Maharishi Markandeshwar Deemed to be University)
-
+**College:** MMDU (Maharishi Markandeshwar Deemed University)
 **Role:** Data Scientist Intern
-
 **Program:** Data Science
-
 **Duration:** May 2026 – Present
 
 ---
@@ -21,6 +17,7 @@
 | `week3_Ashwani_kumar_MMDU.ipynb` | Week 3 | Customer Intelligence System |
 | `week4_Ashwani_kumar_MMDU.ipynb` | Week 4 | Deep Learning — CIFAR-10 |
 | `week5_Ashwani_kumar_MMDU.ipynb` | Week 5 | RNN, LSTM, GRU — Text Generation |
+| `week6_Ashwani_kumar_MMDU.ipynb` | Week 6 | Autoencoder — Image Denoising |
 
 ---
 
@@ -48,7 +45,7 @@
 
 **Topics Covered:**
 - 🧹 Data Cleaning and EDA
-- 🔤 Encoding (LabelEncoder) and Feature Engineering
+- 🔤 Encoding and Feature Engineering
 - ⚖️ Feature Scaling — StandardScaler
 - 📈 Linear, Ridge (L2) and Lasso (L1) Regression
 - 🔁 Cross Validation and Bias Variance Tradeoff
@@ -87,10 +84,12 @@
 ## 📙 Week 4 — Intro to Deep Learning (CIFAR-10)
 
 **Dataset:** CIFAR-10 — 60,000 color images, 10 classes
+**Classes:** Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck
 
 **Topics Covered:**
 - 🧠 Perceptron, MLP, Forward Pass and Backpropagation
 - ⚡ Activation Functions — Sigmoid, Tanh, ReLU Family
+- 📉 Loss Functions — Sparse Categorical Cross Entropy
 - 🔍 Convolution Layer, Pooling, Stride and Padding
 - 🏗️ CNN Architectures and Transfer Learning concepts
 - 📈 Data Augmentation — RandomFlip, RandomRotation, RandomZoom
@@ -139,6 +138,34 @@
 
 ---
 
+## 📓 Week 6 — Autoencoder for Image Denoising
+
+**Dataset:** MNIST Handwritten Digits — 70,000 images, 28x28 pixels
+**Source:** Built into TensorFlow/Keras (tf.keras.datasets.mnist)
+
+**Topics Covered:**
+- 🗜️ Autoencoder architecture — Encoder + Latent Space + Decoder
+- 🔄 Variational Autoencoder (VAE) concepts
+- 🎨 GAN — Generator, Discriminator, Adversarial Training
+- ⚙️ Optimizers — SGD, Momentum, AdaGrad, RMSprop, Adam
+- 🤖 Intro to Generative AI
+- 🔗 RAG with LangChain — Retrieval Augmented Generation
+- 💬 Prompt Engineering techniques
+
+**What Was Built:**
+- Added Gaussian noise (factor=0.3) to clean MNIST images
+- Built Convolutional Autoencoder (Conv2D + MaxPooling + UpSampling)
+- Trained on noisy input → clean output
+- Visualized 3-row comparison: Original → Noisy → Reconstructed
+
+**Key Results:**
+- MSE (Noisy vs Original)         : 0.0466
+- MSE (Reconstructed vs Original) : 0.1140
+- Model successfully reconstructed recognizable digit structure from noisy images
+- Visual denoising clearly demonstrated in 3-row comparison chart
+
+---
+
 ## 🛠️ Tools and Libraries
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
@@ -171,6 +198,21 @@
 | Week 3 | Customer Intelligence System | ✅ Completed |
 | Week 4 | Deep Learning — CIFAR-10 | ✅ Completed |
 | Week 5 | RNN, LSTM, GRU | ✅ Completed |
-| Week 6 | Autoencoders and GAN | 🔄 In Progress |
-| Week 7 | RAG and LLMs | ⏳ Upcoming |
+| Week 6 | Autoencoder — Image Denoising | ✅ Completed |
+| Week 7 | RAG and LLMs | 🔄 In Progress |
 | Week 8 | AI Agents | ⏳ Upcoming |
+
+---
+
+## 🚀 Personal Project
+
+### AI Job Assistant
+An AI-powered personal job agent built and deployed as a final year project.
+
+**Features:**
+- Finds 10-20 best matching jobs based on user skills and resume
+- Ranks jobs by skill match score using semantic similarity
+- Auto-customizes resume for each job application using LLMs
+- Provides direct application links
+
+**Live Demo:** https://ai-job-assistant-app.vercel.app
