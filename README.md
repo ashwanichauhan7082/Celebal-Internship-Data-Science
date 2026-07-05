@@ -4,7 +4,7 @@
 **College:** MMDU (Maharishi Markandeshwar Deemed University)
 **Role:** Data Scientist Intern
 **Program:** Data Science
-**Duration:** May 2026 – Present
+**Duration:** May 2026 – July 2026
 
 ---
 
@@ -18,6 +18,7 @@
 | `week4_Ashwani_kumar_MMDU.ipynb` | Week 4 | Deep Learning — CIFAR-10 |
 | `week5_Ashwani_kumar_MMDU.ipynb` | Week 5 | RNN, LSTM, GRU — Text Generation |
 | `week6_Ashwani_kumar_MMDU.ipynb` | Week 6 | Autoencoder — Image Denoising |
+| `week7_Ashwani_kumar_MMDU.ipynb` | Week 7 | RAG — Document Question Answering |
 
 ---
 
@@ -74,7 +75,7 @@
 - 💡 Cluster Profiling and Business Insights
 
 **Key Results:**
-- Ensemble models (Random Forest, XGBoost) achieved F1 Score of 1.0
+- Ensemble models achieved F1 Score of 1.0
 - Logistic Regression: Accuracy 0.9706, F1 0.9655
 - K-Means K=3 Silhouette Score: 0.2833
 - Countries segmented into Developed, Developing and Underdeveloped clusters
@@ -99,14 +100,14 @@
 | Model | Highlights |
 |-------|-----------|
 | ANN Baseline | Flattens image, ignores spatial structure |
-| CNN Baseline | Uses convolution — significantly outperforms ANN |
+| CNN Baseline | Significantly outperforms ANN |
 | CNN + Larger Filters | Captures more complex features |
 | CNN + 20 Epochs | Longer training, improved accuracy |
 | CNN + EarlyStopping | Automatically finds optimal stopping point |
 | CNN + Augmentation | Better generalization on unseen images |
 
 **Key Results:**
-- CNN significantly outperformed ANN on CIFAR-10 image classification
+- CNN significantly outperformed ANN on CIFAR-10
 - Data augmentation improved model generalization
 - BatchNormalization stabilized CNN training
 
@@ -149,7 +150,7 @@
 - 🎨 GAN — Generator, Discriminator, Adversarial Training
 - ⚙️ Optimizers — SGD, Momentum, AdaGrad, RMSprop, Adam
 - 🤖 Intro to Generative AI
-- 🔗 RAG with LangChain — Retrieval Augmented Generation
+- 🔗 RAG with LangChain concepts
 - 💬 Prompt Engineering techniques
 
 **What Was Built:**
@@ -162,7 +163,38 @@
 - MSE (Noisy vs Original)         : 0.0466
 - MSE (Reconstructed vs Original) : 0.1140
 - Model successfully reconstructed recognizable digit structure from noisy images
-- Visual denoising clearly demonstrated in 3-row comparison chart
+
+---
+
+## 📔 Week 7 — RAG Document Question Answering System
+
+**Task:** Build a Retrieval-Augmented Generation (RAG) system to answer questions from custom documents
+
+**Topics Covered:**
+- 🔗 RAG — Retrieval Augmented Generation pipeline
+- 📄 PDF document loading and text extraction
+- ✂️ Text chunking — RecursiveCharacterTextSplitter
+- 🔢 Vector embeddings — Google embedding-001
+- 🗄️ Vector database — FAISS (Facebook AI Similarity Search)
+- 🔍 Semantic similarity search and retrieval
+- 🤖 LLM integration — Google Gemini 2.5 Flash
+- 💬 Prompt Engineering for accurate Q&A
+- 🏗️ End-to-end RAG pipeline with LangChain
+
+**What Was Built:**
+- Loaded PDF resume document using PyPDFLoader
+- Split into 8 chunks with 500-char size and 50-char overlap
+- Created vector embeddings using Google embedding-001
+- Stored in FAISS vector database for similarity search
+- Built RetrievalQA chain with Gemini 2.5 Flash
+- Successfully answered 5 questions about the document
+- Visualized complete RAG pipeline as diagram
+
+**Key Results:**
+- System correctly identified name, contact, skills, projects and education from document
+- Top 3 most relevant chunks retrieved per question
+- Custom prompt template prevented hallucination
+- Pipeline diagram clearly shows all 7 RAG stages
 
 ---
 
@@ -175,6 +207,9 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-1.7-yellow)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.20-orange)
 ![Keras](https://img.shields.io/badge/Keras-3.0-red)
+![LangChain](https://img.shields.io/badge/LangChain-0.2-purple)
+![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-blue)
+![FAISS](https://img.shields.io/badge/FAISS-Vector_DB-green)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7-blue)
 ![Seaborn](https://img.shields.io/badge/Seaborn-0.12-teal)
 
@@ -185,7 +220,8 @@
 1. Clone this repository
 2. Open any `.ipynb` file in Google Colab
 3. Upload the required dataset (links provided in each notebook)
-4. Run all cells sequentially
+4. For Week 7 — add your own Gemini API key from aistudio.google.com
+5. Run all cells sequentially
 
 ---
 
@@ -199,18 +235,18 @@
 | Week 4 | Deep Learning — CIFAR-10 | ✅ Completed |
 | Week 5 | RNN, LSTM, GRU | ✅ Completed |
 | Week 6 | Autoencoder — Image Denoising | ✅ Completed |
-| Week 7 | RAG and LLMs | 🔄 In Progress |
-| Week 8 | AI Agents | ⏳ Upcoming |
+| Week 7 | RAG — Document QA System | ✅ Completed |
+| Week 8 | AI Agents | 🔄 In Progress |
 
 ---
 
 ## 🚀 Personal Project
 
 ### AI Job Assistant
-An AI-powered personal job agent built and deployed as a final year project.
+An AI-powered personal job agent built and deployed as a personal project.
 
 **Features:**
-- Finds 10-20 best matching jobs based on user skills and resume
+- Finds 10–20 best matching jobs based on user skills and resume
 - Ranks jobs by skill match score using semantic similarity
 - Auto-customizes resume for each job application using LLMs
 - Provides direct application links
