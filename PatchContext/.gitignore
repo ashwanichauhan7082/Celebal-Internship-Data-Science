@@ -1,0 +1,11 @@
+.env
+.env.local
+.env.*
+__pycache__/
+*.pyc
+faiss_index/
+.ipynb_checkpoints/
+.vscode/
+venv/
+.agents/
+evaluation_results.png
