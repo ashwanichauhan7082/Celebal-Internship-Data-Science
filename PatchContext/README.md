@@ -64,6 +64,7 @@ Final Answer
 
 ## 📁 Project Structure
 
+```
 PatchContext/
 ├── app.py                  ← Main Streamlit UI (dark theme)
 ├── data_fetcher.py         ← GitHub API data fetching
@@ -74,6 +75,7 @@ PatchContext/
 ├── .env                    ← API keys (never commit this)
 ├── .gitignore              ← Ignores .env and venv
 └── README.md               ← This file
+```
 
 ---
 
