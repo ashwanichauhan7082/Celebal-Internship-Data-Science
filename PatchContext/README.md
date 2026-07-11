@@ -15,6 +15,7 @@ If no relevant evidence exists, the system safely responds:
 This minimizes hallucinations and ensures trustworthy answers.
 
 Features
+
 GitHub Repository Mining
 Fetches Issues, Pull Requests, and Commits using the GitHub API.
 Retrieval-Augmented Generation (RAG)
@@ -36,7 +37,10 @@ Latency analysis
 Retrieval performance metrics
 Repository Grounding
 Every answer is generated only from retrieved GitHub repository content.
+
+
 Tech Stack
+
 Frontend
 Streamlit
 HTML
@@ -53,7 +57,10 @@ GitHub REST API
 Evaluation
 Pandas
 Matplotlib
+
+
 System Architecture
+
 User Query
       │
       ▼
@@ -81,7 +88,11 @@ User Query
       │
       ▼
  Final Grounded Answer
+
+
+
 Project Structure
+
 PatchContext/
 │
 ├── app.py
@@ -116,12 +127,15 @@ Create a .env file:
 
 GROQ_API_KEY=your_groq_api_key
 GITHUB_TOKEN=your_github_token
+
 Run the Project
+
 streamlit run app.py
 
 Visit:
 
 http://localhost:8501
+
 Evaluation
 
 Run the evaluation module:
@@ -135,6 +149,7 @@ Latency
 Confidence
 Retrieved Sources
 Benchmark Performance
+
 Sample Questions
 Why was APIRouter introduced?
 How does dependency injection work?
@@ -142,6 +157,7 @@ Explain FastAPI middleware architecture.
 Why are path parameters validated?
 Which pull request introduced this feature?
 What design decisions led to this implementation?
+
 Results
 Repository Indexed
 429 Documents
@@ -155,6 +171,8 @@ Hallucination Detection
 Enabled
 Offline Evaluation
 Completed
+
+
 Screenshots
 
 
@@ -183,7 +201,10 @@ Evaluation Dashboard
 <img width="1352" height="674" alt="image" src="https://github.com/user-attachments/assets/60e11d9a-9797-47b7-a1a4-25f260475599" />
 
 
+
+
 Future Improvements
+
 Multi-repository support
 Repository comparison
 Incremental indexing
