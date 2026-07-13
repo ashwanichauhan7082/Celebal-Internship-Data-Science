@@ -1,67 +1,37 @@
-#PatchContext – FastAPI Design Decision RAG Assistant#
 
-An AI-powered Retrieval-Augmented Generation (RAG) system that explains the architectural evolution of FastAPI using GitHub Issues, Pull Requests, and Commits as its only source of truth.
+# 🔍 PatchContext — RAG Pipeline over FastAPI Repository History
 
-Project Overview
+> *"Why was this designed this way?"* — Ask anything about FastAPI's design decisions,
+> grounded in real commit history, pull requests, and issue threads.
 
-PatchContext is a repository-aware AI assistant that helps developers understand why FastAPI was designed in a particular way.
-
-Unlike traditional chatbots that rely on pretrained knowledge, PatchContext retrieves relevant discussions directly from the FastAPI GitHub repository and generates grounded answers supported by repository evidence.
-
-If no relevant evidence exists, the system safely responds:
-
-"I couldn't find this in repository history."
-
-This minimizes hallucinations and ensures trustworthy answers.
-
-Features
-GitHub Repository Mining
-Fetches Issues, Pull Requests, and Commits using the GitHub API.
-Retrieval-Augmented Generation (RAG)
-Uses FAISS vector search with Maximal Marginal Relevance (MMR) retrieval.
-Hallucination Detection
-Calculates grounding scores by comparing generated answers against retrieved documents.
-Interactive Dashboard
-Clean Streamlit interface with:
-Dark/Light mode
-Suggested repository questions
-Repository statistics
-Confidence & Grounding metrics
-Source references
-Search history
-Pipeline Evaluation
-Offline benchmark evaluation
-Grounding score visualization
-Latency analysis
-Retrieval performance metrics
-Repository Grounding
-Every answer is generated only from retrieved GitHub repository content.
-Tech Stack
-Frontend
-Streamlit
-HTML
-CSS
-Backend
-Python
-AI & RAG
-LangChain
-FAISS
-Sentence Transformers
-Groq API (Llama-3.1-8B-Instant)
-Data Source
-GitHub REST API
-Evaluation
-Pandas
-Matplotlib
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-- **GitHub Data Fetching**: Retrieves issues, pull requests, and commits using the GitHub REST API.
-- **MMR Retrieval**: Uses Maximal Marginal Relevance (MMR) retrieval to fetch highly diverse and relevant documents.
-- **Strict Grounding Guard**: Measures the percentage of generated words present in source documents to detect and prevent hallucinations.
-- **Visual Analytics**: Includes an offline evaluation pipeline measuring system latency, retrieval effectiveness, and grounding scores for 10 benchmark developer questions.
-- **Premium Glassmorphic UI**: Beautiful dark-themed Streamlit web interface with interactive examples, execution metrics, and citation badges.
+**PatchContext** is an AI-powered developer assistant that builds a
+Retrieval-Augmented Generation (RAG) pipeline over the
+[FastAPI GitHub repository](https://github.com/fastapi/fastapi).
+
+It lets engineers ask questions about design decisions and get answers
+grounded in actual developer discussions — with clickable citations to
+commit SHAs, PR numbers, and issue IDs.
+
+---
+
+## 🎯 Key Features
+
+- 🔍 **Semantic Search** over FastAPI issues, PRs, and commits
+- 💬 **Natural Language Q&A** powered by Groq LLaMA 3.1
+- 🔗 **Clickable Citations** — every answer cites Issue #, PR #, or Commit SHA
+- 🔄 **MMR Retrieval** — Maximum Marginal Relevance for diverse results
+- 🛡️ **Hallucination Guard** — NLI-based grounding check blocks fabricated answers
+- 📊 **RAGAs Evaluation** — 10-question benchmark measures system performance
+- 🎨 **Premium Dark UI** — Glassmorphic Streamlit dashboard
+
+---
+
+## 🏗️ Architecture
+
 
 ---
 
