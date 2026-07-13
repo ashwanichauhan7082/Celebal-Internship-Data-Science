@@ -124,4 +124,4 @@ To run the offline benchmark suite and measure grounding metrics:
 ## 👤 Author
 
 - **Name**: Ashwani Kumar
-- **Affiliation**: Celebal Technology Internship 2026
+- **Affiliation**: Celebal technologies Internship 2026
