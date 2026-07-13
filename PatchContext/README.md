@@ -30,8 +30,8 @@ commit SHAs, PR numbers, and issue IDs.
 > The main interface showing repository status, indexing statistics,
 > and the query input panel with example questions.
 
-![Home Dashboard](<img width="1349" height="630" alt="2 project" src="https://github.com/user-attachments/assets/11c647a5-8ad9-473e-8e92-956e3b9ca631" />
-)
+<img width="1349" height="630" alt="2 project" src="https://github.com/user-attachments/assets/11c647a5-8ad9-473e-8e92-956e3b9ca631" />
+
 
 ---
 
@@ -39,8 +39,8 @@ commit SHAs, PR numbers, and issue IDs.
 > A sample query about FastAPI design decisions with a grounded answer
 > citing specific Issues, PRs, and Commit SHAs.
 
-![Query Response](<img width="1301" height="614" alt="answer project" src="https://github.com/user-attachments/assets/5a99549b-3f57-44d6-9680-abd74e922b10" />
-)
+<img width="1301" height="614" alt="answer project" src="https://github.com/user-attachments/assets/5a99549b-3f57-44d6-9680-abd74e922b10" />
+
 
 ---
 
@@ -48,17 +48,17 @@ commit SHAs, PR numbers, and issue IDs.
 > Response time, sources found, and grounding score displayed
 > after every query for transparency.
 
-![Metrics Panel](<img width="915" height="181" alt="metric panel project" src="https://github.com/user-attachments/assets/f8e100af-028b-4302-8774-fb8efa701f8b" />
-)
+<img width="915" height="181" alt="metric panel project" src="https://github.com/user-attachments/assets/f8e100af-028b-4302-8774-fb8efa701f8b" />
+
 
 ---
 
 ### 🔗 Repository References
 > Clickable source cards showing the exact Issue #, PR #, or
 > Commit SHA that was used to generate the answer.
+> 
+<img width="1337" height="631" alt="project" src="https://github.com/user-attachments/assets/4ef416d6-b51e-44c7-b57f-cf62e47f28f3" />
 
-![Repository References](<img width="1337" height="631" alt="project" src="https://github.com/user-attachments/assets/4ef416d6-b51e-44c7-b57f-cf62e47f28f3" />
-)
 
 ---
 ---
@@ -73,9 +73,11 @@ commit SHAs, PR numbers, and issue IDs.
 - 📊 **RAGAs Evaluation** — 10-question benchmark measures system performance
 - 🎨 **Premium Dark UI** — Glassmorphic Streamlit dashboard
 
----
+
 
 ## 🏗️ Architecture
+
+---
 GitHub REST API (fastapi/fastapi)
 ↓
 Issues + Pull Requests + Commits
@@ -97,8 +99,10 @@ Answer + Clickable Citations + Hallucination Check
 ↓
 Streamlit UI (Dark Glassmorphic Theme)
 ---
+---
 
 ## 📁 Project Structure
+---
 PatchContext/
 ├── app.py                  ← Main Streamlit UI (dark glassmorphic theme)
 ├── data_fetcher.py         ← GitHub API data fetching (issues, PRs, commits)
@@ -116,6 +120,7 @@ PatchContext/
 │   ├── evaluation_dashboard.png
 │   └── grounding_evaluation.png
 └── README.md               ← This file
+---
 ---
 
 ## 🛠️ Tech Stack
