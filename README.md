@@ -1,4 +1,4 @@
-# 🎓 Celebal Technology — Data Science Internship
+# 🎓 Celebal technologies — Data Science Internship
 
 **Intern:** Ashwani Kumar
 
@@ -17,7 +17,7 @@
 
 All 8 weekly assignments and the final  project have been
 completed and submitted. This repository serves as a complete
-portfolio of the Data Science internship at Celebal Technology.
+portfolio of the Data Science internship at Celebal technologies.
 
 ---
 
@@ -303,6 +303,6 @@ LangChain + FAISS + Groq LLaMA 3.1 + HuggingFace + Streamlit
 
 **Ashwani Kumar**
 - 🎓 B.Tech CSE — MMDU (2027 Batch)
-- 💼 Data Scientist Intern — Celebal Technology
+- 💼 Data Scientist Intern — Celebal technologies
 - 🔗 GitHub: [ashwanichauhan7082](https://github.com/ashwanichauhan7082)
 - 📧 ashwanichauhan.7082@gmail.com
