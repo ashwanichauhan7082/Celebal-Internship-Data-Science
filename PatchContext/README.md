@@ -1,10 +1,58 @@
-# PatchContext: FastAPI Design Decision RAG Assistant
+#PatchContext – FastAPI Design Decision RAG Assistant#
 
-PatchContext is a production-grade Retrieval-Augmented Generation (RAG) assistant designed to help developers understand the architectural design decisions behind FastAPI. Instead of relying on general knowledge, it fetches, indexes, and queries closed issues, pull requests, and commits directly from the FastAPI repository, generating answers grounded entirely in historical evidence.
+An AI-powered Retrieval-Augmented Generation (RAG) system that explains the architectural evolution of FastAPI using GitHub Issues, Pull Requests, and Commits as its only source of truth.
 
-If the answer cannot be found in the repository history, PatchContext is guaranteed to return exactly:
-`"I couldn't find this in repository history."`
+Project Overview
 
+PatchContext is a repository-aware AI assistant that helps developers understand why FastAPI was designed in a particular way.
+
+Unlike traditional chatbots that rely on pretrained knowledge, PatchContext retrieves relevant discussions directly from the FastAPI GitHub repository and generates grounded answers supported by repository evidence.
+
+If no relevant evidence exists, the system safely responds:
+
+"I couldn't find this in repository history."
+
+This minimizes hallucinations and ensures trustworthy answers.
+
+Features
+GitHub Repository Mining
+Fetches Issues, Pull Requests, and Commits using the GitHub API.
+Retrieval-Augmented Generation (RAG)
+Uses FAISS vector search with Maximal Marginal Relevance (MMR) retrieval.
+Hallucination Detection
+Calculates grounding scores by comparing generated answers against retrieved documents.
+Interactive Dashboard
+Clean Streamlit interface with:
+Dark/Light mode
+Suggested repository questions
+Repository statistics
+Confidence & Grounding metrics
+Source references
+Search history
+Pipeline Evaluation
+Offline benchmark evaluation
+Grounding score visualization
+Latency analysis
+Retrieval performance metrics
+Repository Grounding
+Every answer is generated only from retrieved GitHub repository content.
+Tech Stack
+Frontend
+Streamlit
+HTML
+CSS
+Backend
+Python
+AI & RAG
+LangChain
+FAISS
+Sentence Transformers
+Groq API (Llama-3.1-8B-Instant)
+Data Source
+GitHub REST API
+Evaluation
+Pandas
+Matplotlib
 ---
 
 ## 🚀 Features
