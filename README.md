@@ -1,24 +1,39 @@
 # 🎓 Celebal Technology — Data Science Internship
 
 **Intern:** Ashwani Kumar
+
 **College:** MMDU (Maharishi Markandeshwar Deemed University)
+
 **Role:** Data Scientist Intern
+
 **Program:** Data Science
+
 **Duration:** May 2026 – July 2026
+
+
+---
+
+## 🏆 Internship Completed Successfully
+
+All 8 weekly assignments and the final  project have been
+completed and submitted. This repository serves as a complete
+portfolio of the Data Science internship at Celebal Technology.
 
 ---
 
 ## 📁 Repository Structure
 
-| File | Week | Topic |
-|------|------|-------|
+| File/Folder | Week | Topic |
+|-------------|------|-------|
 | `week1_Ashwani_kumar_MMDU.ipynb` | Week 1 | ML Foundations |
 | `week2_Ashwani_kumar_MMDU.ipynb` | Week 2 | Classical ML Pipeline |
 | `week3_Ashwani_kumar_MMDU.ipynb` | Week 3 | Customer Intelligence System |
 | `week4_Ashwani_kumar_MMDU.ipynb` | Week 4 | Deep Learning — CIFAR-10 |
-| `week5_Ashwani_kumar_MMDU.ipynb` | Week 5 | RNN, LSTM, GRU — Text Generation |
-| `week6_Ashwani_kumar_MMDU.ipynb` | Week 6 | Autoencoder — Image Denoising |
-| `week7_Ashwani_kumar_MMDU.ipynb` | Week 7 | RAG — Document Question Answering |
+| `week5_Ashwani_kumar_MMDU.ipynb` | Week 5 | RNN, LSTM, GRU |
+| `week6_Ashwani_kumar_MMDU.ipynb` | Week 6 | Autoencoder Image Denoising |
+| `week7_Ashwani_kumar_MMDU.ipynb` | Week 7 | RAG Document QA System |
+| `week8_Ashwani_kumar_MMDU.ipynb` | Week 8 | Agentic AI Pipeline |
+| `PatchContext/` | Final Project | RAG Pipeline over FastAPI Repo |
 
 ---
 
@@ -51,150 +66,190 @@
 - 📈 Linear, Ridge (L2) and Lasso (L1) Regression
 - 🔁 Cross Validation and Bias Variance Tradeoff
 - 🎛️ Hyperparameter Tuning — GridSearchCV
-- 📅 Time Series — Rolling Statistics, ADF Test, Forecasting, Chronological Split
+- 📅 Time Series — Rolling Statistics, ADF Test, Forecasting
 
 **Key Results:**
-- Built end-to-end ML pipeline predicting Tesla delivery volumes
-- Applied data leakage prevention via correct train/test scaling
-- Compared Linear, Ridge and Lasso models on R² and MAE
+- Built end-to-end ML pipeline on Tesla EV dataset
+- Compared Linear, Ridge and Lasso on R² and MAE
+- Implemented chronological split for time series
 
 ---
 
 ## 📕 Week 3 — Customer Intelligence System
 
-**Dataset:** Unsupervised Learning on Country Data (167 countries, 10 features)
+**Dataset:** Unsupervised Learning on Country Data (167 countries)
 **Source:** [Kaggle](https://www.kaggle.com/datasets/rohan0301/unsupervised-learning-on-country-data)
 
 **Topics Covered:**
 - 🔵 Classification — Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost
-- 🤝 Ensemble Learning — Random Forest, Gradient Boosting, XGBoost, Stacking
-- 📊 Evaluation — Accuracy, Precision, Recall, F1 Score, Confusion Matrix
-- 🌟 Feature Importance — GDP per capita identified as key feature
-- 🔵 Clustering — K-Means (Elbow Method), DBSCAN, Hierarchical
+- 🤝 Ensemble Learning — Stacking with meta-learner
+- 📊 Evaluation — Accuracy, Precision, Recall, F1, Confusion Matrix
+- 🌟 Feature Importance — GDP per capita identified as top feature
+- 🔵 Clustering — K-Means, DBSCAN, Hierarchical
 - 🗺️ PCA Visualization of clusters
-- 💡 Cluster Profiling and Business Insights
 
 **Key Results:**
-- Ensemble models achieved F1 Score of 1.0
+- XGBoost and Random Forest achieved F1 Score of 1.0
 - Logistic Regression: Accuracy 0.9706, F1 0.9655
 - K-Means K=3 Silhouette Score: 0.2833
-- Countries segmented into Developed, Developing and Underdeveloped clusters
+- Countries segmented into Developed, Developing, Underdeveloped
 
 ---
 
 ## 📙 Week 4 — Intro to Deep Learning (CIFAR-10)
 
 **Dataset:** CIFAR-10 — 60,000 color images, 10 classes
-**Classes:** Airplane, Automobile, Bird, Cat, Deer, Dog, Frog, Horse, Ship, Truck
 
 **Topics Covered:**
-- 🧠 Perceptron, MLP, Forward Pass and Backpropagation
-- ⚡ Activation Functions — Sigmoid, Tanh, ReLU Family
-- 📉 Loss Functions — Sparse Categorical Cross Entropy
-- 🔍 Convolution Layer, Pooling, Stride and Padding
-- 🏗️ CNN Architectures and Transfer Learning concepts
-- 📈 Data Augmentation — RandomFlip, RandomRotation, RandomZoom
-- 🛑 EarlyStopping — prevent overfitting
+- 🧠 Perceptron, MLP, Forward Pass, Backpropagation
+- ⚡ Activation Functions — Sigmoid, Tanh, ReLU
+- 🔍 Convolution, Pooling, Stride, Padding
+- 🏗️ CNN Architectures and Transfer Learning
+- 📈 Data Augmentation and BatchNormalization
+- 🛑 EarlyStopping
 
 **Models Built:**
 | Model | Highlights |
 |-------|-----------|
-| ANN Baseline | Flattens image, ignores spatial structure |
-| CNN Baseline | Significantly outperforms ANN |
-| CNN + Larger Filters | Captures more complex features |
-| CNN + 20 Epochs | Longer training, improved accuracy |
-| CNN + EarlyStopping | Automatically finds optimal stopping point |
-| CNN + Augmentation | Better generalization on unseen images |
-
-**Key Results:**
-- CNN significantly outperformed ANN on CIFAR-10
-- Data augmentation improved model generalization
-- BatchNormalization stabilized CNN training
+| ANN Baseline | Flattens image — loses spatial structure |
+| CNN Baseline | ~22% better than ANN |
+| CNN + Larger Filters | More complex feature capture |
+| CNN + 20 Epochs | Improved accuracy |
+| CNN + EarlyStopping | Optimal stopping point |
+| CNN + Augmentation | Better generalization |
 
 ---
 
 ## 📒 Week 5 — RNN, LSTM and GRU (Text Generation)
 
-**Task:** Build and compare sequence models for next-word prediction and text generation
+**Task:** Compare sequence models for next-word prediction
 
 **Topics Covered:**
-- 🔁 Vanilla RNN — baseline sequential model
-- 🔒 LSTM — input, forget and output gates for long-term memory
-- ⚡ GRU — reset and update gates, faster than LSTM
-- 🔤 Tokenization and n-gram sequence creation
+- 🔁 Vanilla RNN — vanishing gradient problem
+- 🔒 LSTM — forget, input, output gates
+- ⚡ GRU — reset and update gates
+- 🔤 Tokenization and n-gram sequences
 - ✍️ Custom text generation function
-- 📉 Training loss comparison across all 3 models
 
 **Tasks Completed:**
-- Replaced corpus with custom paragraph
-- Increased embedding dimension (32 → 100)
-- Increased training epochs (100 → 200)
-- Changed hidden units (64 → 128)
-- Generated extended text sequences (10 words)
+- Custom corpus replacement
+- Embedding dimension increase (32→100)
+- Training to 200 epochs
+- Hidden units increase (64→128)
+- 10-word text generation
 
 **Key Results:**
-- LSTM and GRU achieved lower training loss than vanilla RNN
-- GRU trained faster than LSTM with comparable performance
-- Demonstrated why gated architectures handle long-term dependencies better
+- LSTM and GRU achieved lower loss than vanilla RNN
+- GRU faster than LSTM with comparable performance
 
 ---
 
 ## 📓 Week 6 — Autoencoder for Image Denoising
 
-**Dataset:** MNIST Handwritten Digits — 70,000 images, 28x28 pixels
-**Source:** Built into TensorFlow/Keras (tf.keras.datasets.mnist)
+**Dataset:** MNIST Handwritten Digits (built into TensorFlow)
 
 **Topics Covered:**
-- 🗜️ Autoencoder architecture — Encoder + Latent Space + Decoder
+- 🗜️ Autoencoder — Encoder + Latent Space + Decoder
 - 🔄 Variational Autoencoder (VAE) concepts
-- 🎨 GAN — Generator, Discriminator, Adversarial Training
+- 🎨 GAN — Generator and Discriminator
 - ⚙️ Optimizers — SGD, Momentum, AdaGrad, RMSprop, Adam
-- 🤖 Intro to Generative AI
-- 🔗 RAG with LangChain concepts
-- 💬 Prompt Engineering techniques
+- 🤖 Generative AI Introduction
+- 🔗 RAG concepts and Prompt Engineering
 
 **What Was Built:**
-- Added Gaussian noise (factor=0.3) to clean MNIST images
-- Built Convolutional Autoencoder (Conv2D + MaxPooling + UpSampling)
-- Trained on noisy input → clean output
-- Visualized 3-row comparison: Original → Noisy → Reconstructed
+- Added Gaussian noise (factor=0.3) to MNIST images
+- Convolutional Autoencoder — Conv2D + MaxPooling + UpSampling
+- Trained noisy→clean, visualized Original→Noisy→Reconstructed
 
 **Key Results:**
-- MSE (Noisy vs Original)         : 0.0466
-- MSE (Reconstructed vs Original) : 0.1140
-- Model successfully reconstructed recognizable digit structure from noisy images
+- MSE Noisy vs Original   : 0.0466
+- MSE Reconstructed vs Original : 0.1140
+- Model successfully reconstructed digit structure from noise
 
 ---
 
-## 📔 Week 7 — RAG Document Question Answering System
+## 📔 Week 7 — RAG Document Question Answering
 
-**Task:** Build a Retrieval-Augmented Generation (RAG) system to answer questions from custom documents
+**Task:** Build a Retrieval-Augmented Generation pipeline on a PDF
 
 **Topics Covered:**
-- 🔗 RAG — Retrieval Augmented Generation pipeline
-- 📄 PDF document loading and text extraction
-- ✂️ Text chunking — RecursiveCharacterTextSplitter
+- 🔗 RAG — Retrieval Augmented Generation
+- 📄 PDF loading with PyPDFLoader
+- ✂️ Text chunking (500 chars, 50 overlap)
 - 🔢 Vector embeddings — Google embedding-001
-- 🗄️ Vector database — FAISS (Facebook AI Similarity Search)
-- 🔍 Semantic similarity search and retrieval
-- 🤖 LLM integration — Google Gemini 2.5 Flash
-- 💬 Prompt Engineering for accurate Q&A
-- 🏗️ End-to-end RAG pipeline with LangChain
+- 🗄️ FAISS vector database
+- 🔍 Similarity search retrieval
+- 🤖 Gemini 2.5 Flash LLM
+- 💬 Prompt Engineering
 
-**What Was Built:**
-- Loaded PDF resume document using PyPDFLoader
-- Split into 8 chunks with 500-char size and 50-char overlap
-- Created vector embeddings using Google embedding-001
-- Stored in FAISS vector database for similarity search
-- Built RetrievalQA chain with Gemini 2.5 Flash
-- Successfully answered 5 questions about the document
-- Visualized complete RAG pipeline as diagram
+**Pipeline:**
+PDF → Chunks → Embeddings → FAISS → Retriever → Gemini → Answer
+**Key Results:**
+- 8 chunks indexed from resume PDF
+- 5 questions answered accurately with citations
+- Custom prompt prevented hallucination
+- Pipeline diagram visualized all 7 RAG stages
+
+---
+
+## 📃 Week 8 — Agentic AI Pipeline
+
+**Task:** Build a Single Agent System with conditional tool routing
+
+**Topics Covered:**
+- 🤖 AI Agents — concept and architecture
+- 🔧 Tool definition and registration
+- 🔄 Conditional routing based on intent
+- 📊 Structured JSON output format
+- 🎯 ReAct — Reasoning + Acting paradigm
+- 🔁 Interactive agent loop
+
+**Agent Built:**
+| Component | Details |
+|-----------|---------|
+| Tool 1 | Calculator — math expressions |
+| Tool 2 | Keyword Extractor — text analysis |
+| Routing | Intent-based conditional logic |
+| Output | Structured JSON with type + result |
+| Mode | Interactive real-time Q&A |
 
 **Key Results:**
-- System correctly identified name, contact, skills, projects and education from document
-- Top 3 most relevant chunks retrieved per question
-- Custom prompt template prevented hallucination
-- Pipeline diagram clearly shows all 7 RAG stages
+- Calculator correctly solved all math queries
+- Keyword extractor identified top 5 keywords
+- General knowledge routing for AI/DS topics
+- Interactive mode tested with multiple queries
+
+---
+
+## 🔍 Final Project — PatchContext
+
+**RAG Pipeline over FastAPI Repository History**
+
+> *"Why was this designed this way?"* — Ask anything about FastAPI
+> grounded in real commits, PRs, and issue threads.
+
+**Source:** [FastAPI GitHub](https://github.com/fastapi/fastapi)
+**Folder:** [PatchContext/](./PatchContext/)
+
+**Features:**
+- 🐙 Fetches live data from GitHub API — issues, PRs, commits
+- 🔢 HuggingFace embeddings (all-MiniLM-L6-v2) — free, local
+- 🗄️ FAISS vector database for fast retrieval
+- 🔄 MMR retrieval — Maximum Marginal Relevance for diverse results
+- 🔗 Clickable citations — Issue #, PR #, Commit SHA in every answer
+- 🛡️ NLI-based hallucination guard
+- 📊 RAGAs 10-question benchmark evaluation
+- 🎨 Premium dark glassmorphic Streamlit UI
+
+**Tech Stack:**
+LangChain + FAISS + Groq LLaMA 3.1 + HuggingFace + Streamlit
+**Evaluation Results:**
+| Metric | Score |
+|--------|-------|
+| Questions answered | 5/10 |
+| Answers with sources | 5/10 |
+| Grounded (no hallucination) | 10/10 |
+| Overall score | 50% |
 
 ---
 
@@ -209,23 +264,13 @@
 ![Keras](https://img.shields.io/badge/Keras-3.0-red)
 ![LangChain](https://img.shields.io/badge/LangChain-0.2-purple)
 ![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-blue)
-![FAISS](https://img.shields.io/badge/FAISS-Vector_DB-green)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7-blue)
-![Seaborn](https://img.shields.io/badge/Seaborn-0.12-teal)
+![Groq](https://img.shields.io/badge/Groq-LLaMA_3.1-green)
+![FAISS](https://img.shields.io/badge/FAISS-Vector_DB-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.35-red)
 
 ---
 
-## 📌 How to Run
-
-1. Clone this repository
-2. Open any `.ipynb` file in Google Colab
-3. Upload the required dataset (links provided in each notebook)
-4. For Week 7 — add your own Gemini API key from aistudio.google.com
-5. Run all cells sequentially
-
----
-
-## 🚀 Progress
+## 🚀 Progress — All Complete
 
 | Week | Topic | Status |
 |------|-------|--------|
@@ -234,21 +279,30 @@
 | Week 3 | Customer Intelligence System | ✅ Completed |
 | Week 4 | Deep Learning — CIFAR-10 | ✅ Completed |
 | Week 5 | RNN, LSTM, GRU | ✅ Completed |
-| Week 6 | Autoencoder — Image Denoising | ✅ Completed |
-| Week 7 | RAG — Document QA System | ✅ Completed |
-| Week 8 | AI Agents | 🔄 In Progress |
+| Week 6 | Autoencoder Image Denoising | ✅ Completed |
+| Week 7 | RAG Document QA System | ✅ Completed |
+| Week 8 | Agentic AI Pipeline | ✅ Completed |
+| Final Project | PatchContext RAG Pipeline | ✅ Completed |
 
 ---
 
-## 🚀 Personal Project
+---
 
-### AI Job Assistant
-An AI-powered personal job agent built and deployed as a personal project.
+## 📌 How to Run
 
-**Features:**
-- Finds 10–20 best matching jobs based on user skills and resume
-- Ranks jobs by skill match score using semantic similarity
-- Auto-customizes resume for each job application using LLMs
-- Provides direct application links
+1. Clone this repository
+2. Open any `.ipynb` in Google Colab
+3. Upload required dataset (links in each notebook)
+4. For Week 7 — add Gemini API key from aistudio.google.com
+5. For PatchContext — see [PatchContext/README.md](./PatchContext/README.md)
+6. Run all cells sequentially
 
-**Live Demo:** https://ai-job-assistant-app.vercel.app
+---
+
+## 👨‍💻 About
+
+**Ashwani Kumar**
+- 🎓 B.Tech CSE — MMDU (2027 Batch)
+- 💼 Data Scientist Intern — Celebal Technology
+- 🔗 GitHub: [ashwanichauhan7082](https://github.com/ashwanichauhan7082)
+- 📧 ashwanichauhan.7082@gmail.com
