@@ -30,8 +30,6 @@ commit SHAs, PR numbers, and issue IDs.
 
 ---
 
-## 🏗️ Architecture
-
 
 ---
 
