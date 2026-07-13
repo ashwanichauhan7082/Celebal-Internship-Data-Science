@@ -24,6 +24,17 @@ commit SHAs, PR numbers, and issue IDs.
 
 ---
 
+## ⭐ Highlights
+
+- Built from scratch using Python
+- Uses FAISS for semantic retrieval
+- Integrates Groq Llama 3.1
+- Uses MMR retrieval strategy
+- Implements a hallucination guard
+- Includes evaluation metrics and benchmarking
+- Interactive Streamlit dashboard
+
+- 
 ## 🖼️ Screenshots
 
 ### 🏠 Home Dashboard
@@ -76,50 +87,53 @@ commit SHAs, PR numbers, and issue IDs.
 
 
 ## 🏗️ Architecture
-
----
-GitHub REST API (fastapi/fastapi)
-↓
-Issues + Pull Requests + Commits
-↓
+```text
+GitHub API
+      │
+      ▼
+Issues + PRs + Commits
+      │
+      ▼
 RecursiveCharacterTextSplitter
-(chunk_size=500, overlap=50)
-↓
-Sentence Transformers
-(all-MiniLM-L6-v2 — free, local)
-↓
-FAISS Vector Database
-↓
+      │
+      ▼
+Embeddings (all-MiniLM-L6-v2)
+      │
+      ▼
+FAISS Vector Store
+      │
+      ▼
 MMR Retriever
-(k=5, fetch_k=20, λ=0.7)
-↓
-Groq API — Llama-3.1-8B-Instant
-↓
-Answer + Clickable Citations + Hallucination Check
-↓
-Streamlit UI (Dark Glassmorphic Theme)
+      │
+      ▼
+Groq Llama 3.1
+      │
+      ▼
+Grounding Check
+      │
+      ▼
+Final Answer
+```
+---
+
+
 ---
 ---
 
 ## 📁 Project Structure
 ---
+```text
 PatchContext/
-├── app.py                  ← Main Streamlit UI (dark glassmorphic theme)
-├── data_fetcher.py         ← GitHub API data fetching (issues, PRs, commits)
-├── rag_pipeline.py         ← Embeddings, FAISS, MMR retrieval, Groq LLM
-├── hallucination_guard.py  ← NLI-based grounding verification
-├── evaluation.py           ← RAGAs 10-question benchmark evaluation
-├── requirements.txt        ← All dependencies
-├── .env                    ← API keys (never commit this file)
-├── .gitignore              ← Ignores .env, venv, pycache
-├── screenshots/            ← UI screenshots for README
-│   ├── home_dashboard.png
-│   ├── query_response.png
-│   ├── metrics_panel.png
-│   ├── repository_references.png
-│   ├── evaluation_dashboard.png
-│   └── grounding_evaluation.png
-└── README.md               ← This file
+├── app.py
+├── data_fetcher.py
+├── rag_pipeline.py
+├── hallucination_guard.py
+├── evaluation.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── .env.example
+```
 ---
 ---
 
@@ -232,13 +246,15 @@ Open your browser at `http://localhost:8501`
 
 ## 🛡️ Hallucination Guard
 
-Every answer is verified before being shown to the user:
-Grounding Score = Overlapping words (answer ∩ sources)
-─────────────────────────────────────
-Total words in answer
-Score > 0.15  →  ✅ Grounded — safe to display
-Score ≤ 0.15  →  ⚠️ Warning — possible hallucination detected
----
+```text
+Grounding Score =
+Overlapping words(answer ∩ sources)
+-----------------------------------
+Total words(answer)
+
+Score > 0.15  → ✅ Grounded
+Score ≤ 0.15  → ⚠️ Possible hallucination
+```
 
 ## 🔄 RAG Pipeline Settings
 
@@ -270,8 +286,8 @@ streamlit run app.py
 3. Connect your GitHub repository
 4. Select `PatchContext/app.py` as main file
 5. Add secrets:
-6. GROQ_API_KEY = "your-key-here"
-7. 6. Click **Deploy** — live in 2 minutes
+   GROQ_API_KEY = "your-key-here"
+6.  Click **Deploy** — live in 2 minutes
 
 ---
 
@@ -290,7 +306,7 @@ streamlit run app.py
 ## 🙏 Acknowledgements
 
 - [FastAPI](https://github.com/fastapi/fastapi) — incredible open source repository
-- [Celebal Technology](https://celebaltech.com) — internship opportunity and guidance
+- [Celebal Technologies](https://celebaltech.com) — internship opportunity and guidance
 - [Groq](https://groq.com) — fastest free LLM API
 - [LangChain](https://langchain.com) — RAG pipeline framework
 - [HuggingFace](https://huggingface.co) — free Sentence Transformer models
@@ -304,13 +320,12 @@ streamlit run app.py
 
 🎓 B.Tech Computer Science Engineering
 🏫 Maharishi Markandeshwar Deemed University (MMDU)
-💼 Data Scientist Intern — Celebal Technology
-🏢 Microsoft Global AI Partner of the Year 2026
+💼 Data Scientist Intern — Celebal Technologies
+
 
 | Platform | Link |
 |----------|------|
 | GitHub | [ashwanichauhan7082](https://github.com/ashwanichauhan7082) |
-| Live Project | [ai-job-assistant-app.vercel.app](https://ai-job-assistant-app.vercel.app) |
 | Email | ashwanichauhan.7082@gmail.com |
 
 ---
@@ -318,8 +333,8 @@ streamlit run app.py
 ## 📄 License
 
 This project was developed for educational and internship purposes
-as part of the Celebal Technology Data Science Internship 2026.
+as part of the Celebal Technologies Data Science Internship 2026.
 
 ---
 
-*Built with ❤️ by Ashwani Kumar | Celebal Technology Internship 2026*
+*Built with ❤️ by Ashwani Kumar | Celebal Technologies Internship 2026*
